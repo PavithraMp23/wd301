@@ -14,13 +14,14 @@ function App() {
           <h1 className="text-xl font-semibold mb-4">pending</h1>
           <TaskCard
             title="Build the website with static components"
-            dueDate="09-90-2004"
+            dueDate="09-09-2004"
             assigneeName="Pavithra"
           />
           <TaskCard
             title="Study about all this"
-            dueDate="09-90-2004"
+            dueDate="09-09-2004"
             assigneeName="Pavithra"
+
           />
         </div>
 
@@ -30,13 +31,13 @@ function App() {
           <TaskCard
             title="Study about all this"
             isCompleted={true}
-            completedAtDate="09-90-2004"
+            completedAtDate="09-09-2004"
             assigneeName="Pavithra"
           />
           <TaskCard
             title="Study about all this"
             isCompleted={true}
-            completedAtDate="09-90-2004"
+            completedAtDate="09-09-2004"
             assigneeName="Pavithra"
           />
         </div>
