@@ -1,5 +1,6 @@
 import TaskCard from './TaskCard';
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="flex flex-row">
         {/* Pending Section */}
         <div className="basis-full rounded-2xl shadow-md p-4">
-          <h1 className="text-xl font-semibold mb-4">Pending</h1>
+          <h1 className="text-xl font-semibold mb-4">pending</h1>
           <TaskCard
             title="Build the website with static components"
             dueDate="09-90-2004"
@@ -25,17 +26,17 @@ function App() {
 
         {/* Done Section */}
         <div className="basis-full rounded-2xl shadow-md p-4">
-          <h1 className="text-xl font-semibold mb-4">Done</h1>
+          <h1 className="text-xl font-semibold mb-4">done</h1>
           <TaskCard
             title="Study about all this"
             isCompleted={true}
-            completedOn="09-90-2004"
+            completedAtDate="09-90-2004"
             assigneeName="Pavithra"
           />
           <TaskCard
             title="Study about all this"
             isCompleted={true}
-            completedOn="09-90-2004"
+            completedAtDate="09-90-2004"
             assigneeName="Pavithra"
           />
         </div>
