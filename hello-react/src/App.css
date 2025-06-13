@@ -1,0 +1,12 @@
+.header{
+    background-color: gray;
+}
+.body{}
+.footer{
+    background-color: gray;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
