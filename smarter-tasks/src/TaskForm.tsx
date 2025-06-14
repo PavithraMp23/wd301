@@ -118,7 +118,7 @@ const TaskForm = (props: TaskFormProps) => {
   const addTask: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     console.log(`Submitted the form with`);
-    if (formState.title.length === 0 || formState.dueDate.length === 0) {
+    if (formState.title === "" && formState.dueDate === "") {
       return;
     }
     props.addTask(formState);
@@ -182,6 +182,7 @@ const TaskForm = (props: TaskFormProps) => {
         <div className="relative z-0 w-full mb-6 group">
           <button
             type="submit"
+            id="addTaskButton"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Add item

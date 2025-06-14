@@ -14,7 +14,7 @@ const TaskList = ({ tasks, deleteTask }: Props) => {
   return (
     <ul>
       {tasks.map((task, idx) => (
-        <Task
+        <Task 
           key={idx} //error ow
           title={task.title}
           description={task.description}
