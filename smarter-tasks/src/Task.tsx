@@ -1,6 +1,6 @@
 //rendering of each tasks in the page
 
-import React from "react";
+
 
 interface TaskProp {
   title: string;

@@ -4,8 +4,7 @@ import type { TaskItem } from "./types";
 import TaskForm from "./TaskForm";
 import TaskList from "./TaskList";
 import { useLocalStorage } from "./hooks/useLocalStorage";
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type, @typescript-eslint/no-unused-vars
-interface TaskAppProp {}
+
 
 interface TaskAppState {
   tasks: TaskItem[];

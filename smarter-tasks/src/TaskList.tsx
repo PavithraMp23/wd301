@@ -1,6 +1,6 @@
 //we will be rendering the tasklist using the component Task
 
-import React from "react";
+
 import Task from "./Task";
 import type { TaskItem } from "./types";
 interface Props {
@@ -8,8 +8,7 @@ interface Props {
   deleteTask: (index: number) => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type, @typescript-eslint/no-unused-vars
-interface State {}
+
 
 const TaskList = ({ tasks, deleteTask }: Props) => {
   return (
