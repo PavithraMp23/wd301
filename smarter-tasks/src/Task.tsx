@@ -1,11 +1,32 @@
 //rendering of each tasks in the page
 
 import React from "react";
+
 interface TaskProp {
   title: string;
   description: string;
   dueDate: string;
+  onDelete: () => void;
 }
+
+const Task = (props: TaskProp) => {
+  return (
+    <li className="TaskItem shadow-md border border-slate-100 p-3 rounded mb-2">
+      <h2 className="text-base font-bold my-1">{props.title}</h2>
+      <p className="text-sm text-slate-500">Due Date: {props.dueDate}</p>
+      <p className="text-sm text-slate-500">Description: {props.description}</p>
+      <button
+        className="deleteTaskButton mt-2 text-sm text-red-600"
+        onClick={props.onDelete}
+      >
+        Delete
+      </button>
+    </li>
+  );
+};
+export default Task;
+
+/*
 class Task extends React.Component<TaskProp> {
   render() {
     return (
@@ -19,4 +40,4 @@ class Task extends React.Component<TaskProp> {
     );
   }
 }
-export default Task;
+export default Task;*/
