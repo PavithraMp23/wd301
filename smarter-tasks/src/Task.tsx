@@ -1,29 +1,36 @@
-//rendering of each tasks in the page
+import "./TaskCard.css";
+import { type TaskItem } from "./types";
 
-
-
-interface TaskProp {
-  title: string;
-  description: string;
-  dueDate: string;
-  onDelete: () => void;
+interface TaskProps {
+  item: TaskItem;
+  removeTask: (task: TaskItem) => void;
 }
-
-const Task = (props: TaskProp) => {
+const Task = (props: TaskProps) => {
+  const { item, removeTask } = props;
   return (
-    <li className="TaskItem shadow-md border border-slate-100 p-3 rounded mb-2">
-      <h2 className="text-base font-bold my-1">{props.title}</h2>
-      <p className="text-sm text-slate-500">Due Date: {props.dueDate}</p>
-      <p className="text-sm text-slate-500">Description: {props.description}</p>
-      <button
-        className="deleteTaskButton mt-2 text-sm text-red-600"
-        onClick={props.onDelete}
-      >
-        Delete
-      </button>
-    </li>
+    <div className="TaskItem shadow-md border border-slate-100">
+      <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+        <div>
+          <a href={`/tasks/${item.id || ""}`}>
+            <h2 className="text-base font-bold my-1">{item.title}</h2>
+          </a>
+          <p className="text-sm text-slate-500">{item.dueDate}</p>
+          <p className="text-sm text-slate-500">
+            Description: {item.description}
+          </p>
+        </div>
+
+        <button
+          className="deleteTaskButton cursor-pointer flex items-center justify-center h-4 w-4 rounded-full my-5 mr-5"
+          onClick={() => removeTask(item)}
+        >
+          X
+        </button>
+      </div>
+    </div>
   );
 };
+
 export default Task;
 
 /*
